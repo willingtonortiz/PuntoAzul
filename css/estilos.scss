@@ -1,5 +1,144 @@
+%centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {}
+
+header {
+    .slider {
+        height: 100vh;
+        background-color: tomato;
+    }
+    nav {
+        background-color: #F0F3F5;
+        transition: all .5s;
+        max-height: 80px;
+        overflow: hidden;
+        >* {
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 16px;
+            color: #888A8B;
+            font-size: 20px;
+        }
+        a:hover {
+            background-color: #FEFEFE;
+        }
+    }
+}
+
+.botonMenu {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #888D8F;
+    border-radius: 10%;
+    padding: 10px 8px;
+    cursor: pointer;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    .raya {
+        width: 80%;
+        height: 3px;
+        background-color: #888D8F;
+    }
+}
+
+#bienvenidos,
+#nosotros,
+#carta,
+#locales,
+#reservas,
+#contactenos {
+    min-height: 100vh;
+}
+
+#bienvenidos,
+#nosotros {
+    header {
+        padding: 2em;
+        @extend %centrar;
+        flex-direction: column;
+        h1 {
+            @extend %centrar;
+            font-size: 2em;
+        }
+        .circuloGenerico {
+            margin: 2em;
+        }
+        p {
+            @extend %centrar;
+        }
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+#bienvenidos {
+    header {
+        p {
+            @extend %centrar;
+            width: 70%;
+        }
+    }
+}
+
+#nosotros {
+    background-color: #F0F3F5;
+    header {
+        p {
+            @extend %centrar;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .contenedor {
+        background-color: #F0F3F5;
+        margin-bottom: 30px;
+        .imagen {
+            width: 100%;
+        }
+        .tabs {
+            width: 90%;
+            margin: auto;
+            background-color: #FFFFFF;
+            .titulos {
+                display: flex;
+                background-color: #F0F3F5;
+                .tab {
+                    width: 30%;
+                    background-color: #01B2E3;
+                    color: #eee;
+                    font-size: 20px;
+                    padding: 1em;
+                    cursor: pointer;
+                }
+                .tabSelect{
+                    background-color: #FFFFFF;
+                    color: #323232;
+                }
+            }
+            .contenidos {
+                padding: 1.5em;
+            }
+        }
+    }
+}
+
+#carta {
+    background-color: red;
 }
