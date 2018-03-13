@@ -1,3 +1,14 @@
+window.addEventListener('scroll',e=>{
+    var navegacion = document.getElementsByClassName("navegacion");
+    console.log(e.pageY);
+    if(e.pageY >=615){
+        navegacion[0].classList.add('bac')
+    }
+    else{
+        navegacion[0].classList.remove('bac');
+    }
+  
+})
 window.onload = function () {
     inicializarDatos();
 };
@@ -5,6 +16,9 @@ var inicializarDatos = function () {
     iniciarNavBar();
     iniciarTabs();
 };
+
+
+
 var iniciarNavBar = function () {
     var navegacion = document.querySelector("nav");
     navegacion.style.maxHeight = '80px';
@@ -34,8 +48,10 @@ var iniciarTabs = function () {
     contenidoActual.style.display = "block";
 };
 var alternarAltura = function (Item, altura) {
+    console.log(Item.scrollHeight);
     if (Item.style.maxHeight === altura) {
-        Item.style.maxHeight = Item.scrollHeight + 'px';
+        Item.style.maxHeight = Item.scrollHeight + 'px'
+        console.log(Item.scrollHeight);
     }
     else {
         Item.style.maxHeight = altura;
