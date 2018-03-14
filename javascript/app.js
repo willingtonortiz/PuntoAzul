@@ -1,6 +1,5 @@
 window.addEventListener('scroll',e=>{
     var slider = document.getElementsByClassName('slider');
-    console.log(slider[0].scrollHeight);
     var navegacion = document.getElementsByClassName("navegacion");
     if(e.pageY >=slider[0].scrollHeight){
         navegacion[0].classList.add('bac')
@@ -16,8 +15,38 @@ window.onload = function () {
 var inicializarDatos = function () {
     iniciarNavBar();
     iniciarTabs();
+    DisplayCarta();
 };
 
+var DisplayCarta = function()
+{
+
+    var platos = document.getElementsByClassName('platos');
+    var menu = document.getElementsByClassName('menu-item');
+    platos[0].classList.add('show-platos');
+    document.getElementById('locales').style.marginTop = (platos[0].scrollHeight-40) +"px";
+    for(var i=0; i<menu.length; i++)
+    {
+        menu[i].addEventListener('click',e=>{
+            var index = e.target.getAttribute('data-btn');
+            var pindex= parseInt(index);
+
+            console.log(pindex);
+            for(var j=0; j<menu.length; j++)
+            {
+                if(j === (pindex-1)){
+                    platos[j].classList.add('show-platos');
+                    document.getElementById('locales').style.marginTop = (platos[j].scrollHeight-40) +"px";
+
+                }
+                else{
+                    platos[j].classList.remove('show-platos');
+                }
+            }
+        })
+    }
+        
+}
 
 
 var iniciarNavBar = function () {

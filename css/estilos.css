@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
 #bienvenidos header,
 #nosotros header, #bienvenidos header h1,
 #nosotros header h1, #bienvenidos header p,
@@ -11,13 +12,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 html,
 body {
   width: 100%;
   height: 100%;
+  background: #fff;
+}
+
+h2 {
+  font-size: 50px;
 }
 
 .slider {
@@ -113,7 +119,6 @@ header nav a:hover {
 
 #nosotros .contenedor {
   background-color: #FFFFFF;
-  margin-bottom: 30px;
 }
 
 #nosotros .contenedor .imagen {
@@ -122,8 +127,8 @@ header nav a:hover {
 
 #nosotros .contenedor .tabs {
   width: 90%;
-  margin: auto;
   background-color: #FFFFFF;
+  margin: 0 auto;
 }
 
 #nosotros .contenedor .tabs .titulos {
@@ -149,10 +154,6 @@ header nav a:hover {
   padding: 1.5em;
 }
 
-#carta {
-  background-color: red;
-}
-
 .contenidos {
   width: 100%;
 }
@@ -174,6 +175,7 @@ header nav a:hover {
   width: 100%;
   transition: all .2s ease-in-out;
   animation: moveNav .2s ease-in-out forwards;
+  z-index: 1000;
 }
 
 .navegacion {
@@ -187,5 +189,146 @@ header nav a:hover {
   to {
     transform: translateY(0px);
   }
+}
+
+#carta {
+  width: 100%;
+  background: #fff;
+  padding: 40px;
+}
+
+#carta h2 {
+  width: 100%;
+  text-align: center;
+}
+
+#carta p {
+  margin: 50px 0;
+  width: 100%;
+  text-align: center;
+}
+
+#carta img {
+  width: 100%;
+}
+
+#carta ul {
+  width: 100%;
+  display: flex;
+  background: #222;
+  margin: 0 auto;
+}
+
+#carta ul li {
+  list-style: none;
+  cursor: pointer;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+#carta ul li a {
+  text-decoration: none;
+  color: #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+#carta ul li:hover {
+  background: #666;
+}
+
+.platos {
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  transition: all .5s ease-in-out;
+  position: absolute;
+  transform: scale(0.1);
+  background: #fff;
+  left: 0;
+  padding: 20px;
+}
+
+.show-platos {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#locales {
+  transition: all .2s ease-in-out;
+  background: #eef;
+  width: 100%;
+  padding: 40px;
+  position: relative;
+}
+
+#locales h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#locales .container-locales {
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+.ubi-locales {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  height: auto;
+}
+
+.ubi-locales ul {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: space-around;
+  height: 100%;
+  padding: 0 40px;
+}
+
+.ubi-locales ul li {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ubi-locales ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #01B2E3;
+  font-size: 30px;
+  text-align: center;
+}
+
+.img-locales {
+  width: 50%;
+  height: 100%;
+}
+
+.img-locales img {
+  height: 500px;
+}
+
+#contactanos {
+  widows: 100%;
+}
+
+#contactanos h2 {
+  text-align: center;
+}
+
+#contactanos p {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 4;
+  font-size: 20px;
 }
 /*# sourceMappingURL=estilos.css.map */
