@@ -2,7 +2,7 @@
 #bienvenidos header,
 #nosotros header, #bienvenidos header h1,
 #nosotros header h1, #bienvenidos header p,
-#nosotros header p {
+#nosotros header p, #carta .carta .contenedorTitulos .tipo, #carta .carta .contenedorTipos .contenedorPlatos .plato {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,39 +118,43 @@ header nav a:hover {
 }
 
 #nosotros .contenedor {
-  background-color: #FFFFFF;
+  background-color: #F0F3F5;
+  display: flex;
+  flex-direction: column;
 }
 
 #nosotros .contenedor .imagen {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 #nosotros .contenedor .tabs {
   width: 90%;
-  background-color: #FFFFFF;
+  background-color: #F0F3F5;
   margin: 0 auto;
 }
 
-#nosotros .contenedor .tabs .titulos {
+#nosotros .contenedor .tabs .tituloContenedor {
   display: flex;
   background-color: #FFFFFF;
 }
 
-#nosotros .contenedor .tabs .titulos .tab {
+#nosotros .contenedor .tabs .tituloContenedor .titulo {
   width: 30%;
   background-color: #01B2E3;
   color: #eee;
-  font-size: 20px;
-  padding: 1em;
+  font-weight: bold;
+  font-size: 18px;
+  padding: .8em;
   cursor: pointer;
 }
 
-#nosotros .contenedor .tabs .titulos .tabSelect {
+#nosotros .contenedor .tabs .tituloContenedor .activo {
   background-color: #FFFFFF;
-  color: #323232;
+  color: #646464;
 }
 
-#nosotros .contenedor .tabs .contenidos {
+#nosotros .contenedor .tabs .contenidoContenedor {
   padding: 1.5em;
 }
 
@@ -194,7 +198,6 @@ header nav a:hover {
 #carta {
   width: 100%;
   background: #fff;
-  padding: 40px;
 }
 
 #carta h2 {
@@ -212,47 +215,67 @@ header nav a:hover {
   width: 100%;
 }
 
-#carta ul {
-  width: 100%;
+#carta .carta .contenedorTitulos {
   display: flex;
-  background: #222;
-  margin: 0 auto;
 }
 
-#carta ul li {
-  list-style: none;
+#carta .carta .contenedorTitulos .tipo {
+  flex: 1;
+  padding: 1em;
   cursor: pointer;
-  width: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-}
-
-#carta ul li a {
-  text-decoration: none;
+  background: #222;
   color: #eee;
-  padding: 20px;
-  text-align: center;
+  transition: all .3s;
 }
 
-#carta ul li:hover {
+#carta .carta .contenedorTitulos .tipo:hover {
   background: #666;
 }
 
-.platos {
-  opacity: 0;
-  width: 100%;
-  height: auto;
-  transition: all .5s ease-in-out;
-  position: absolute;
-  transform: scale(0.1);
-  background: #fff;
-  left: 0;
-  padding: 20px;
+#carta .carta .contenedorTipos {
+  position: relative;
 }
 
-.show-platos {
+#carta .carta .contenedorTipos .contenedorPlatos {
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 0;
+  position: absolute;
+  transform: scale(0.1);
+  transition: all .5s ease-in-out;
+}
+
+#carta .carta .contenedorTipos .contenedorPlatos .plato {
+  width: 50%;
+  flex-direction: column;
+  margin: 35px 0;
+}
+
+#carta .carta .contenedorTipos .contenedorPlatos .plato img {
+  width: 35%;
+  border: 5px solid darkgray;
+  border-radius: 50%;
+}
+
+#carta .carta .contenedorTipos .contenedorPlatos .plato .datos h3 {
+  color: #646464;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#carta .carta .contenedorTipos .contenedorPlatos .plato .datos span {
+  color: deepskyblue;
+  font-size: 20px;
+}
+
+#carta .carta .contenedorTipos .contenedorPlatos .plato .datos img,
+#carta .carta .contenedorTipos .contenedorPlatos .plato .datos h3,
+#carta .carta .contenedorTipos .contenedorPlatos .plato .datos p,
+#carta .carta .contenedorTipos .contenedorPlatos .plato .datos span {
+  margin: 5px 0;
+}
+
+#carta .carta .contenedorTipos .show-platos {
   opacity: 1;
   transform: scale(1);
 }
@@ -313,7 +336,7 @@ header nav a:hover {
 }
 
 .img-locales img {
-  height: 500px;
+  max-width: 100%;
 }
 
 #contactanos {
@@ -330,5 +353,32 @@ header nav a:hover {
   text-align: center;
   line-height: 4;
   font-size: 20px;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 864px) {
+  #nosotros,
+  #carta {
+    width: 90%;
+    margin: auto;
+  }
+  #nosotros .contenedor {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #nosotros .contenedor .imagen,
+  #nosotros .contenedor .tabs {
+    width: 49%;
+  }
+  #nosotros .contenedor .tabs {
+    margin: 0;
+  }
+  #carta .plato {
+    width: 33.3333% !important;
+    flex-direction: row !important;
+  }
+  #carta .plato .datos {
+    margin-left: 25px;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */

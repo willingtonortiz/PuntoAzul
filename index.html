@@ -8,6 +8,7 @@
     <title>Punto Azul</title>
     <link rel="stylesheet" href="css/estilos.css">
     <script src="javascript/app.js"></script>
+    <script src="javascript/jowo.js"></script>
 </head>
 
 <body id="body">
@@ -68,14 +69,14 @@
                 <div class="imagen">
                     <img src="img\4ceviches.jpg" alt="">
                 </div>
-                <div class="tabs">
-                    <div class="titulos">
-                        <div data-tab="1" class="tab">Nuestra Historia</div>
-                        <div data-tab="2" class="tab">Nuestros Valores</div>
-                        <div data-tab="3" class="tab">Misión y Visión</div>
+                <div id="nosotrosTabs" class="tabs">
+                    <div class="tituloContenedor">
+                        <div class="titulo">Nuestra Historia</div>
+                        <div class="titulo">Nuestros Valores</div>
+                        <div class="titulo">Misión y Visión</div>
                     </div>
-                    <div class="contenidos">
-                        <div class="tabContenido" id="contenido1">
+                    <div class="contenidoContenedor">
+                        <div class="contenido">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic tempore, nihil adipisci minima repudiandae rerum reiciendis
                             corporis dicta vitae. Error totam earum necessitatibus magnam odit fugit accusamus animi eaque
                             aliquam?
@@ -93,7 +94,7 @@
                             amet voluptatem similique. Recusandae repellat voluptatibus doloribus! Officiis eius ipsam, recusandae
                             in beatae sequi pariatur unde?
                         </div>
-                        <div class="tabContenido" id="contenido2">
+                        <div class="contenido">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic tempore, nihil adipisci minima repudiandae rerum reiciendis
                             corporis dicta vitae. Error totam earum necessitatibus magnam odit fugit accusamus animi eaque
                             aliquam?
@@ -106,7 +107,7 @@
                             amet voluptatem similique. Recusandae repellat voluptatibus doloribus! Officiis eius ipsam, recusandae
                             in beatae sequi pariatur unde?
                         </div>
-                        <div class="tabContenido" id="contenido3">
+                        <div class="contenido">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic tempore, nihil adipisci minima repudiandae rerum reiciendis
                             corporis dicta vitae. Error totam earum necessitatibus magnam odit fugit accusamus animi eaque
                             aliquam?
@@ -128,103 +129,442 @@
                 el mundo.
             </p>
             <img src="img/punto-azul-ceviche.png" alt="">
-            <ul>
-                <li>
-                    <a data-btn="1" class="menu-item" href="#s">
-                        Para comenzar
-                    </a>
-                </li>
-                <li>
-                    <a data-btn="2" class="menu-item" href="#s">
-                        ¡Hey causa !
-                    </a>
-                </li>
-                <li>
-                    <a data-btn="3" class="menu-item" href="#s">
-                        Los Crocantes
-                    </a>
-                </li>
-                <li>
-                    <a data-btn="4" class="menu-item" href="#s">
-                        Los Frescos
-                    </a>
-                </li>
-                <li>
-                    <a data-btn="5" class="menu-item" href="#s">
-                        Pescadito
-                    </a>
-                </li>
-                <li>
-                    <a data-btn="6" class="menu-item" href="#s">
-                        Mariscos
-                    </a>
-                </li>
-                <li>
-                    <a data-btn="7" class="menu-item" href="#s">
-                        Arroz y Risotti
-                    </a>
-                </li>
-                <li>
-                    <a data-btn="8" class="menu-item" href="#s">
-                        Tacus Tacus
-                    </a>
-                </li>
-                <li>
-                    <a data-btn="9" class="menu-item" href="#s">
-                        Pastas
-                    </a>
-                </li>
-                <li>
-                    <a data-btn="10" class="menu-item" href="#s">
-                        Sopas
-                    </a>
-                </li>
-
-            </ul>
-            <section class="platos">
-                <h2> Para comenzar</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cupiditate rerum velit sit quos omnis dolor itaque eum officiis? Atque nam reprehenderit mollitia officiis alias fugit odio harum officia tempore?</p>
-            </section>
-            <section class="platos">
-                <h2> ¡Hey causa</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cupiditate rerum velit sit quos omnis dolor itaque eum officiis? Atque nam reprehenderit mollitia officiis alias fugit odio harum officia tempore?</p>
-            </section>
-            <section class="platos">
-                <h2> Los Crocantes</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cupiditate rerum velit sit quos omnis dolor itaque eum officiis? Atque nam reprehenderit mollitia officiis alias fugit odio harum officia tempore?</p>
-            </section>
-            <section class="platos">
-                <h2> Los Frescos</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cupiditate rerum velit sit quos omnis dolor itaque eum officiis? Atque nam reprehenderit mollitia officiis alias fugit odio harum officia tempore?</p>
-            </section>
-            <section class="platos">
-                <h2> Pescadito</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cupiditate rerum velit sit quos omnis dolor itaque eum officiis? Atque nam reprehenderit mollitia officiis alias fugit odio harum officia tempore?</p>
-            </section>
-            <section class="platos">
-                <h2> Mariscos</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cupiditate rerum velit sit quos omnis dolor itaque eum officiis? Atque nam reprehenderit mollitia officiis alias fugit odio harum officia tempore?</p>
-            </section>
-            <section class="platos">
-                <h2> Arroz y Risotti</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cupiditate rerum velit sit quos omnis dolor itaque eum officiis? Atque nam reprehenderit mollitia officiis alias fugit odio harum officia tempore?</p>
-            </section>
-            <section class="platos">
-                <h2> Tacus Tacus</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cupiditate rerum velit sit quos omnis dolor itaque eum officiis? Atque nam reprehenderit mollitia officiis alias fugit odio harum officia tempore?</p>
-            </section>
-            <section class="platos">
-                <h2> Pastas</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cupiditate rerum velit sit quos omnis dolor itaque eum officiis? Atque nam reprehenderit mollitia officiis alias fugit odio harum officia tempore?</p>
-            </section>
-            <section class="platos">
-                <h2> Sopas</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa vitae accusamus at maxime reiciendis inventore suscipit, laudantium veniam sequi asperiores deserunt, neque eius soluta natus iure quis nulla cum porro?</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore cupiditate rerum velit sit quos omnis dolor itaque eum officiis? Atque nam reprehenderit mollitia officiis alias fugit odio harum officia tempore?</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa vitae accusamus at maxime reiciendis inventore suscipit, laudantium veniam sequi asperiores deserunt, neque eius soluta natus iure quis nulla cum porro?</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa vitae accusamus at maxime reiciendis inventore suscipit, laudantium veniam sequi asperiores deserunt, neque eius soluta natus iure quis nulla cum porro?</p>
-            </section>
-
+            <div class="carta">
+                <div class="contenedorTitulos">
+                    <div class="tipo">Tipo 1</div>
+                    <div class="tipo">Tipo 2</div>
+                    <div class="tipo">Tipo 3</div>
+                    <div class="tipo">Tipo 4</div>
+                    <div class="tipo">Tipo 5</div>
+                    <div class="tipo">Tipo 6</div>
+                    <div class="tipo">Tipo 7</div>
+                    <div class="tipo">Tipo 8</div>
+                    <div class="tipo">Tipo 9</div>
+                    <div class="tipo">Tipo 10</div>
+                </div>
+                <div class="contenedorTipos">
+                    <div class="contenedorPlatos">
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorPlatos">
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Segundos Platos</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Segundos Platos</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Segundos Platos</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Segundos Platos</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Segundos Platos</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorPlatos">
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorPlatos">
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorPlatos">
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorPlatos">
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorPlatos">
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorPlatos">
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorPlatos">
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorPlatos">
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                        <div class="plato">
+                            <img src="img/plato_generico.jpg" alt="">
+                            <div class="datos">
+                                <h3>Nombre Plato</h3>
+                                <p>Descripcion Plato</p>
+                                <span>Precio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </article>
 
         <article id="locales">
@@ -232,12 +572,24 @@
             <div class="container-locales">
                 <div class="ubi-locales">
                     <ul>
-                        <li><a href="">San Borja</a></li>
-                        <li><a href="">San Isidro</a></li>
-                        <li><a href="">Primavera - Surco</a></li>
-                        <li><a href="">Caminos del Inca - Surco</a></li>
-                        <li><a href="">Benavides - Miraflores</a></li>
-                        <li><a href="">San Martin - Miraflores</a></li>
+                        <li>
+                            <a href="">San Borja</a>
+                        </li>
+                        <li>
+                            <a href="">San Isidro</a>
+                        </li>
+                        <li>
+                            <a href="">Primavera - Surco</a>
+                        </li>
+                        <li>
+                            <a href="">Caminos del Inca - Surco</a>
+                        </li>
+                        <li>
+                            <a href="">Benavides - Miraflores</a>
+                        </li>
+                        <li>
+                            <a href="">San Martin - Miraflores</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="img-locales">
@@ -254,10 +606,13 @@
         <article id="contactanos">
             <h2>Contactanos</h2>
             <p>
-                    Envíanos tus consultas y/o comentarios.<br>
-                    <strong>Recuerda que las reservas deben realizarse únicamente vía telefónica,</strong><br>
-                    puedes hacer tu reserva llamando al local que desees asistir, dentro de su horario de atención.<br>
-                    (El servicio de reservas está sujeto a disponibilidad de cada local, de no contar con disponibilidad no se aceptarán reservas.)<br>
+                Envíanos tus consultas y/o comentarios.
+                <br>
+                <strong>Recuerda que las reservas deben realizarse únicamente vía telefónica,</strong>
+                <br> puedes hacer tu reserva llamando al local que desees asistir, dentro de su horario de atención.
+                <br> (El servicio de reservas está sujeto a disponibilidad de cada local, de no contar con disponibilidad no
+                se aceptarán reservas.)
+                <br>
             </p>
         </article>
     </main>
@@ -265,7 +620,9 @@
     <footer>
 
     </footer>
-
+    <script>
+        var nosotrosTabs = new Tab('nosotrosTabs');
+    </script>
 </body>
 
 </html>
