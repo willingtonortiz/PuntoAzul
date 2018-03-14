@@ -1,7 +1,8 @@
 window.addEventListener('scroll',e=>{
+    var slider = document.getElementsByClassName('slider');
+    console.log(slider[0].scrollHeight);
     var navegacion = document.getElementsByClassName("navegacion");
-    console.log(e.pageY);
-    if(e.pageY >=615){
+    if(e.pageY >=slider[0].scrollHeight){
         navegacion[0].classList.add('bac')
     }
     else{
