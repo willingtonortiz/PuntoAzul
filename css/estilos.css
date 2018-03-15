@@ -381,49 +381,48 @@ header nav a:hover {
     margin-left: 25px;
   }
 }
-.formulario{
+
+.formulario {
   display: flex;
   flex-flow: column wrap;
   width: 100%;
   justify-content: center;
   align-content: center;
 }
- input{
-  width:80%;
-  margin:1vh;
+
+input {
+  width: 80%;
+  margin: 1vh;
   height: 60px;
   font-size: 20px;
-  border-radius: 4px; 
-  padding: 3% ;
+  border-radius: 4px;
+  padding: 3%;
   color: #555;
   border: 2px solid #ccc;
   background-color: #f0f3f5;
 }
-.ellanoteama{
-  width:80%;
-  margin:1vh;
+
+.ellanoteama {
+  width: 80%;
+  margin: 1vh;
   font-size: 20px;
-  border-radius: 4px; 
-  padding: 20px ;
+  border-radius: 4px;
+  padding: 20px;
   color: #555;
   border: 2px solid #ccc;
   background-color: #f0f3f5;
-  height: 20vh; 
+  height: 20vh;
 }
-.enviar{
+
+.enviar {
   width: 40%;
   border-color: #00b2e3;
   background-color: #00b2e3;
   border-radius: 5px;
-border-width: 1px;
-border-style: solid;
-color: #fff;
-padding: 15px 20px;
-font-size: 20px;
-
-} 
-#correcto{
-  
+  border-width: 1px;
+  border-style: solid;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 20px;
 }
-
 /*# sourceMappingURL=estilos.css.map */
