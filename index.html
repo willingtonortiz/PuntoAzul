@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Punto Azul</title>
+    <meta name="og:title" content="Punto Azul">
+    <meta name="og:type" content="restaurante">
+    <meta name="og:image" content="img/4ceviches.jpg">
+    <!-- <meta name="og:url" content=""> -->
     <link rel="stylesheet" href="css/estilos.css">
     <script src="javascript/app.js"></script>
     <script src="javascript/jowo.js"></script>
@@ -599,9 +603,6 @@
 
         </article>
 
-        <article id="reservas">
-            <h2>Reservas</h2>
-        </article>
 
         <article id="contactanos">
             <h2>Contactanos</h2>
@@ -614,12 +615,22 @@
                 se aceptarán reservas.)
                 <br>
             </p>
+            <div class="formulario">
+                <input name="name" placeholder="Nombre" type="text" required>
+                <input name="mail" placeholder="Correo" type="email">
+                <input name="telephone" placeholder="Teléfono" type="text"required>
+                <input name="case" placeholder="Asunto" type="text">
+                <textarea class="ellanoteama" name="message"  cols="1" rows="7" placeholder="Mensaje" required></textarea>
+                <input  id="boton"class="enviar" name="Chequear" type="submit"   value="Enviar">
+            </div>
+           
         </article>
     </main>
 
     <footer>
 
     </footer>
+    
     <script>
         var nosotrosTabs = new Tab('nosotrosTabs');
     </script>
