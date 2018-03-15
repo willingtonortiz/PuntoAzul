@@ -186,15 +186,6 @@ header nav a:hover {
   transition: all .2s ease-in-out;
 }
 
-@keyframes moveNav {
-  from {
-    transform: translateY(30px);
-  }
-  to {
-    transform: translateY(0px);
-  }
-}
-
 #carta {
   width: 100%;
   background: #fff;
