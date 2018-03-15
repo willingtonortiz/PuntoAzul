@@ -1,7 +1,8 @@
 window.addEventListener('scroll', e => {
     var slider = document.getElementsByClassName('slider');
     var navegacion = document.getElementsByClassName("navegacion");
-    if (e.pageY >= slider[0].scrollHeight) {
+    var scroll = document.documentElement.scrollTop;
+    if (e.pageY >= slider[0].scrollHeight || scroll>= slider[0].scrollHeight) {
         navegacion[0].classList.add('bac')
     } else {
         navegacion[0].classList.remove('bac');
