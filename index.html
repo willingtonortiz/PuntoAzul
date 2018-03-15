@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="es" prefix="og: http://ogp.me/ns#">
 
 <head>
     <meta charset="UTF-8">
@@ -16,9 +16,14 @@
 </head>
 
 <body id="body">
-    <div class="slider">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic illum accusamus explicabo eaque consectetur, cum dicta
-            aperiam ea provident cumque cupiditate voluptate impedit. Neque quos ullam illum hic, consequatur distinctio!</p>
+    <div id="miSlider" class="sliderContainer">
+        <div class="sliderWrapper">
+            <img class="sliderItem" src="img/4ceviches.jpg" alt="">
+            <img class="sliderItem" src="img/4ceviches.jpg" alt="">
+            <img class="sliderItem" src="img/4ceviches.jpg" alt="">
+            <img class="sliderItem" src="img/4ceviches.jpg" alt="">
+            <img class="sliderItem" src="img/4ceviches.jpg" alt="">
+        </div>
     </div>
     <header>
         <nav class="navegacion">
@@ -603,7 +608,6 @@
 
         </article>
 
-
         <article id="contactanos">
             <h2>Contactanos</h2>
             <p>
@@ -618,21 +622,27 @@
             <div class="formulario">
                 <input name="name" placeholder="Nombre" type="text" required>
                 <input name="mail" placeholder="Correo" type="email">
-                <input name="telephone" placeholder="Teléfono" type="text"required>
+                <input name="telephone" placeholder="Teléfono" type="text" required>
                 <input name="case" placeholder="Asunto" type="text">
-                <textarea class="ellanoteama" name="message"  cols="1" rows="7" placeholder="Mensaje" required></textarea>
-                <input  id="boton"class="enviar" name="Chequear" type="submit"   value="Enviar">
+                <textarea class="ellanoteama" name="message" cols="1" rows="7" placeholder="Mensaje" required></textarea>
+                <input id="boton" class="enviar" name="Chequear" type="submit" value="Enviar">
             </div>
-           
+
         </article>
     </main>
 
     <footer>
 
     </footer>
-    
+
     <script>
         var nosotrosTabs = new Tab('nosotrosTabs');
+        var mislider = new Slider('miSlider', {
+            paginacion: {
+                clickeable: false,
+            },
+            duracion: 4000,
+        });
     </script>
 </body>
 
