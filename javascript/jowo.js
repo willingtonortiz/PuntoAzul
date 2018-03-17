@@ -65,7 +65,6 @@ var Slider = /** @class */ (function () {
             contenedor.classList.add("sliderButtons");
             for (var i = 0; i < _this.cantSlides; i++) {
                 var boton = document.createElement("button");
-                boton.innerText = (i + 1) + '';
                 if (parametros.clickeable) {
                     boton.setAttribute("data-slide", i + '');
                     boton.addEventListener("click", function (evento) {
