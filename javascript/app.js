@@ -1,5 +1,5 @@
 window.addEventListener('scroll', e => {
-    var slider = document.getElementsByClassName('slider');
+    var slider = document.getElementsByClassName('sliderContainer');
     var navegacion = document.getElementsByClassName("navegacion");
     var scroll = document.documentElement.scrollTop;
     if (e.pageY >= slider[0].scrollHeight || scroll>= slider[0].scrollHeight) {
