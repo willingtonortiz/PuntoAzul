@@ -1,5 +1,5 @@
 window.addEventListener('scroll', e => {
-    var slider = document.getElementsByClassName('sliderContainer');
+    var slider = document.getElementsByClassName('jw-sliderContainer');
     var navegacion = document.getElementsByClassName("navegacion");
     var scroll = document.documentElement.scrollTop;
     if (e.pageY >= slider[0].scrollHeight || scroll>= slider[0].scrollHeight) {
@@ -43,10 +43,8 @@ var iniciarNavBar = function () {
 };
 
 var alternarAltura = function (Item, altura) {
-    console.log(Item.scrollHeight);
     if (Item.style.maxHeight === altura) {
         Item.style.maxHeight = Item.scrollHeight + 'px'
-        console.log(Item.scrollHeight);
     } else {
         Item.style.maxHeight = altura;
     }

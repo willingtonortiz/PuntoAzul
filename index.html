@@ -11,20 +11,24 @@
     <meta name="og:image" content="img/4ceviches.jpg">
     <!-- <meta name="og:url" content=""> -->
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/jowo.css">
     <script src="javascript/app.js"></script>
     <script src="javascript/jowo.js"></script>
 </head>
 
 <body id="body">
-    <div id="miSlider" class="sliderContainer">
-        <div class="sliderWrapper">
-            <img class="sliderItem" src="img/4ceviches.jpg" alt="">
-            <img class="sliderItem" src="img/4ceviches.jpg" alt="">
-            <img class="sliderItem" src="img/4ceviches.jpg" alt="">
-            <img class="sliderItem" src="img/4ceviches.jpg" alt="">
-            <img class="sliderItem" src="img/4ceviches.jpg" alt="">
+    <div id="miSlider" class="jw-sliderContainer">
+        <div class="jw-sliderWrapper">
+            <img class="jw-sliderItem" src="img/4ceviches.jpg" alt="">
+            <img class="jw-sliderItem" src="img/4ceviches.jpg" alt="">
+            <img class="jw-sliderItem" src="img/4ceviches.jpg" alt="">
+            <img class="jw-sliderItem" src="img/4ceviches.jpg" alt="">
+            <img class="jw-sliderItem" src="img/4ceviches.jpg" alt="">
         </div>
     </div>
+
+    <a class="botonRegresar" href="#body">:'v</a>
+
     <header>
         <nav class="navegacion">
             <div class="contenedorMenu">
@@ -38,13 +42,10 @@
             <a href="#nosotros">Nosotros</a>
             <a href="#carta">La Carta</a>
             <a href="#locales">Locales</a>
-            <a href="#reservas">Reservas</a>
-            <a href="#reservas">Reservas</a>
-            <a href="#reservas">Reservas</a>
-
             <a href="#contactanos">Contáctanos</a>
         </nav>
     </header>
+
     <main>
         <article id="bienvenidos">
             <header>
@@ -55,17 +56,13 @@
                 </p>
             </header>
             <div class="v">
-
                 <img src="img/punto-azul-ceviche.png" alt="Imagen Gigante">
             </div>
-
-
         </article>
 
         <article id="nosotros">
             <header>
                 <h2>Nosotros</h2>
-                <!-- <div class="circuloGenerico"></div> -->
                 <p>
                     Punto Azul, una gran familia dedicada a brindarles la mejor experiencia culinaria con la pasión que nos caracteriza.
                     <br>Cada una de las personas en nuestro equipo está comprometida a transportarte mediante nuestros sabores
@@ -130,26 +127,33 @@
         </article>
 
         <article id="carta">
-            <h2>La Carta</h2>
-            <p>
-                Nuestra carta está compuesta de variados platos preparados con ingredientes estrella, los cuales al combinarse aportan la
-                esencia y el reconocimiento de cada uno de ellos. No esmeramos en ofrecerles una propuesta innovadora pensado
-                en la total satisfacción de los paladares peruanos, caracterizados por un gran historial de sabores que conquista
-                el mundo.
-            </p>
+            <header>
+
+                <h2>La Carta</h2>
+                <p>
+                    Nuestra carta está compuesta de variados platos preparados con ingredientes estrella, los cuales al combinarse aportan la
+                    esencia y el reconocimiento de cada uno de ellos. No esmeramos en ofrecerles una propuesta innovadora
+                    pensado en la total satisfacción de los paladares peruanos, caracterizados por un gran historial de sabores
+                    que conquista el mundo.
+                </p>
+            </header>
             <img src="img/punto-azul-ceviche.png" alt="">
             <div class="carta">
                 <div class="contenedorTitulos">
-                    <div class="tipo">Tipo 1</div>
-                    <div class="tipo">Tipo 2</div>
-                    <div class="tipo">Tipo 3</div>
-                    <div class="tipo">Tipo 4</div>
-                    <div class="tipo">Tipo 5</div>
-                    <div class="tipo">Tipo 6</div>
-                    <div class="tipo">Tipo 7</div>
-                    <div class="tipo">Tipo 8</div>
-                    <div class="tipo">Tipo 9</div>
-                    <div class="tipo">Tipo 10</div>
+                    <div class="grupo1">
+                        <div class="tipo">Tipo 1</div>
+                        <div class="tipo">Tipo 2</div>
+                        <div class="tipo">Tipo 3</div>
+                        <div class="tipo">Tipo 4</div>
+                        <div class="tipo">Tipo 5</div>
+                    </div>
+                    <div class="grupo2">
+                        <div class="tipo">Tipo 6</div>
+                        <div class="tipo">Tipo 7</div>
+                        <div class="tipo">Tipo 8</div>
+                        <div class="tipo">Tipo 9</div>
+                        <div class="tipo">Tipo 10</div>
+                    </div>
                 </div>
                 <div class="contenedorTipos">
                     <div class="contenedorPlatos">
@@ -620,26 +624,31 @@
                 <br>
             </p>
             <div class="formulario">
-                <input name="name" placeholder="Nombre" type="text" required>
-                <input name="mail" placeholder="Correo" type="email">
-                <input name="telephone" placeholder="Teléfono" type="text" required>
-                <input name="case" placeholder="Asunto" type="text">
-                <textarea class="ellanoteama" name="message" cols="1" rows="7" placeholder="Mensaje" required></textarea>
-                <input id="boton" class="enviar" name="Chequear" type="submit" value="Enviar">
+                <div class="formGrupo1">
+                    <input placeholder="Nombre" type="text" required>
+                    <input placeholder="Correo" type="email" required>
+                    <input placeholder="Teléfono" type="text" required>
+                    <input placeholder="Asunto" type="text" required>
+                </div>
+                <div class="formGrupo1">
+                    <textarea cols="1" rows="7" placeholder="Mensaje" required></textarea>
+                    <input id="boton" class="enviar" type="submit" value="Enviar Mensaje">
+                </div>
             </div>
 
         </article>
     </main>
 
     <footer>
-
+        <p>&copy;2018 by Adreanalina. Todos los derechos resevados</p>
     </footer>
 
     <script>
         var nosotrosTabs = new Tab('nosotrosTabs');
         var mislider = new Slider('miSlider', {
-            paginacion: {
+            botones: {
                 clickeable: false,
+                enumeracion: false,
             },
             duracion: 4000,
         });

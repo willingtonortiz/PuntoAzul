@@ -1,3 +1,29 @@
+var Acordeon = /** @class */ (function () {
+    function Acordeon(nombre) {
+        var _this = this;
+        this.inicializarDatos = function () {
+            for (var i = 0; i < _this.titulos.length; i++) {
+                _this.titulos[i].nextElementSibling.style.maxHeight = "0px";
+                _this.titulos[i].addEventListener("click", function (evento) {
+                    evento.target.classList.toggle('activo');
+                    _this.toggleAltura(evento.target.nextElementSibling);
+                });
+            }
+        };
+        this.toggleAltura = function (Item) {
+            if (Item.style.maxHeight === '0px') {
+                Item.style.maxHeight = Item.scrollHeight + 'px';
+            }
+            else {
+                Item.style.maxHeight = '0px';
+            }
+        };
+        var acordeon = document.getElementById(nombre);
+        this.titulos = acordeon.getElementsByClassName("titulo");
+        this.inicializarDatos();
+    }
+    return Acordeon;
+}());
 var Tab = /** @class */ (function () {
     function Tab(nombre) {
         var _this = this;
@@ -38,7 +64,7 @@ var Slider = /** @class */ (function () {
             for (var i = 0; i < _this.cantSlides; i++) {
                 _this.slides[i].style.display = "none";
             }
-            _this.slides[_this.actualSlide].style.display = "block";
+            _this.slides[_this.actualSlide - 1].style.display = "block";
         };
         this.iniciarMovimiento = function () {
             _this.inicializarDatos();
@@ -46,27 +72,29 @@ var Slider = /** @class */ (function () {
         };
         this.movimiento = function (numero) {
             _this.toggleButton();
-            _this.slides[_this.actualSlide].style.display = "none";
+            _this.slides[_this.actualSlide - 1].style.display = "none";
             _this.actualSlide++;
-            if (_this.actualSlide === _this.cantSlides)
-                _this.actualSlide = 0;
+            if (_this.actualSlide > _this.cantSlides)
+                _this.actualSlide = 1;
             _this.actualSlide = numero || _this.actualSlide;
             _this.toggleButton();
-            _this.slides[_this.actualSlide].style.display = "block";
-            _this.slides[_this.actualSlide].style.animation = 'aparecer 1s forwards';
+            _this.slides[_this.actualSlide - 1].style.display = "block";
         };
         this.toggleButton = function () {
             if (_this.botones)
-                _this.botones[_this.actualSlide].classList.toggle("activo");
+                _this.botones[_this.actualSlide - 1].classList.toggle("active");
         };
-        this.agregarBotones = function (parametros) {
+        this.agregarBotones = function (botones) {
             _this.botones = [];
             var contenedor = document.createElement("div");
-            contenedor.classList.add("sliderButtons");
+            contenedor.classList.add("jw-sliderButtons");
             for (var i = 0; i < _this.cantSlides; i++) {
                 var boton = document.createElement("button");
-                if (parametros.clickeable) {
-                    boton.setAttribute("data-slide", i + '');
+                if (botones.enumeracion) {
+                    boton.innerText = (i + 1) + '';
+                }
+                if (botones.clickeable) {
+                    boton.setAttribute("data-slide", (i + 1) + '');
                     boton.addEventListener("click", function (evento) {
                         var numero = parseInt(evento.target.getAttribute("data-slide"));
                         if (_this.actualSlide !== numero) {
@@ -75,20 +103,18 @@ var Slider = /** @class */ (function () {
                     });
                 }
                 _this.botones.push(boton);
-                if (_this.actualSlide === i) {
-                    _this.botones[i].classList.toggle("activo");
-                }
                 contenedor.appendChild(boton);
             }
+            _this.botones[_this.actualSlide - 1].classList.toggle("active");
             _this.slider.parentElement.appendChild(contenedor);
         };
-        this.slider = document.getElementById(nombre).getElementsByClassName("sliderWrapper")[0];
-        this.slides = this.slider.getElementsByClassName("sliderItem");
+        this.slider = document.getElementById(nombre).getElementsByClassName("jw-sliderWrapper")[0];
+        this.slides = this.slider.getElementsByClassName("jw-sliderItem");
         this.cantSlides = this.slides.length;
-        this.actualSlide = 0;
+        this.actualSlide = 1;
         this.duracion = parametros.duracion || 3000;
-        if (parametros.paginacion)
-            this.agregarBotones(parametros.paginacion);
+        if (parametros.botones)
+            this.agregarBotones(parametros.botones);
         this.iniciarMovimiento();
     }
     return Slider;

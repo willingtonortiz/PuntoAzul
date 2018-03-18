@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
-#bienvenidos header,
-#nosotros header, #bienvenidos header h1,
-#nosotros header h1, #bienvenidos header p,
-#nosotros header p, #carta .carta .contenedorTitulos .tipo, #carta .carta .contenedorTipos .contenedorPlatos .plato {
+.botonRegresar, #bienvenidos header,
+#nosotros header,
+#carta header, #bienvenidos header h1,
+#nosotros header h1,
+#carta header h1, #bienvenidos header p,
+#nosotros header p,
+#carta header p, #carta .carta .contenedorTitulos .grupo1 .tipo,
+#carta .carta .contenedorTitulos .grupo2 .tipo, #carta .carta .contenedorTipos .contenedorPlatos .plato, footer, .formulario, .formulario .formGrupo1,
+.formulario .formGrupo2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,54 +27,9 @@ body {
   background: #fff;
 }
 
-h2 {
+html h2,
+body h2 {
   font-size: 50px;
-}
-
-.sliderContainer {
-  z-index: 0 !important;
-  overflow: hidden;
-  position: relative;
-}
-
-.sliderContainer .sliderWrapper {
-  height: 100%;
-  display: flex;
-}
-
-.sliderContainer .sliderWrapper .sliderItem {
-  flex: 1;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.sliderContainer {
-  height: 100vh;
-}
-
-.sliderButtons {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all .5s;
-}
-
-.sliderButtons button {
-  border: none;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  margin: 0 10px;
-  background-color: #323232;
-}
-
-.sliderButtons button.activo {
-  background-color: #eee;
-  color: #323232;
 }
 
 @keyframes aparecer {
@@ -79,6 +39,26 @@ h2 {
   to {
     opacity: 1;
   }
+}
+
+.botonRegresar {
+  position: fixed;
+  z-index: 10000;
+  right: 2em;
+  bottom: 4em;
+  background-color: deepskyblue;
+  color: #eee;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: .5;
+  transition: all .3s;
+  text-decoration: none;
+}
+
+.botonRegresar:hover {
+  opacity: 1;
 }
 
 header nav {
@@ -132,29 +112,39 @@ header nav a:hover {
 }
 
 #bienvenidos header,
-#nosotros header {
+#nosotros header,
+#carta header {
   padding: 2em;
   flex-direction: column;
 }
 
 #bienvenidos header h1,
-#nosotros header h1 {
+#nosotros header h1,
+#carta header h1 {
   font-size: 2em;
 }
 
 #bienvenidos header .circuloGenerico,
-#nosotros header .circuloGenerico {
+#nosotros header .circuloGenerico,
+#carta header .circuloGenerico {
   margin: 2em;
 }
 
 #bienvenidos img,
-#nosotros img {
+#nosotros img,
+#carta img {
   max-width: 100%;
   max-height: 100%;
 }
 
 #bienvenidos header p {
   width: 70%;
+}
+
+#bienvenidos .v {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #nosotros {
@@ -216,12 +206,6 @@ header nav a:hover {
   color: #777777;
 }
 
-.v {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .bac {
   position: fixed;
   top: 0%;
@@ -257,18 +241,27 @@ header nav a:hover {
 
 #carta .carta .contenedorTitulos {
   display: flex;
+  flex-wrap: wrap;
 }
 
-#carta .carta .contenedorTitulos .tipo {
+#carta .carta .contenedorTitulos .grupo1,
+#carta .carta .contenedorTitulos .grupo2 {
+  width: 100%;
+  display: flex;
+}
+
+#carta .carta .contenedorTitulos .grupo1 .tipo,
+#carta .carta .contenedorTitulos .grupo2 .tipo {
   flex: 1;
-  padding: 1em;
+  padding: .5em;
   cursor: pointer;
   background: #222;
   color: #eee;
   transition: all .3s;
 }
 
-#carta .carta .contenedorTitulos .tipo:hover {
+#carta .carta .contenedorTitulos .grupo1 .tipo:hover,
+#carta .carta .contenedorTitulos .grupo2 .tipo:hover {
   background: #666;
 }
 
@@ -321,9 +314,7 @@ header nav a:hover {
 }
 
 #locales {
-  transition: all .2s ease-in-out;
   background: #eef;
-  width: 100%;
   padding: 40px;
   position: relative;
 }
@@ -335,18 +326,23 @@ header nav a:hover {
 
 #locales .container-locales {
   display: flex;
-  height: 100%;
+  flex-flow: row wrap;
   position: relative;
 }
 
-.ubi-locales {
-  width: 50%;
+#locales .container-locales .ubi-locales,
+#locales .container-locales .img-locales {
+  width: 100%;
+}
+
+#locales .container-locales .ubi-locales {
+  margin-bottom: 2em;
   display: flex;
   justify-content: flex-end;
   height: auto;
 }
 
-.ubi-locales ul {
+#locales .container-locales .ubi-locales ul {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
@@ -355,14 +351,14 @@ header nav a:hover {
   padding: 0 40px;
 }
 
-.ubi-locales ul li {
+#locales .container-locales .ubi-locales ul li {
   list-style: none;
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 
-.ubi-locales ul li a {
+#locales .container-locales .ubi-locales ul li a {
   text-transform: uppercase;
   text-decoration: none;
   color: #01B2E3;
@@ -370,17 +366,12 @@ header nav a:hover {
   text-align: center;
 }
 
-.img-locales {
-  width: 50%;
+#locales .container-locales .img-locales {
   height: 100%;
 }
 
-.img-locales img {
+#locales .container-locales .img-locales img {
   max-width: 100%;
-}
-
-#contactanos {
-  widows: 100%;
 }
 
 #contactanos h2 {
@@ -388,11 +379,51 @@ header nav a:hover {
 }
 
 #contactanos p {
-  width: 80%;
-  margin: 0 auto;
+  width: 95%;
+  margin: auto;
   text-align: center;
-  line-height: 4;
+  font-size: 18px;
+  line-height: 2em;
+}
+
+footer {
+  background-color: #323232;
+  color: #eee;
+  font-size: 18px;
+  padding: 4em 0;
+}
+
+.formulario {
+  flex-flow: row wrap;
+}
+
+.formulario .formGrupo1,
+.formulario .formGrupo2 {
+  width: 100%;
+  flex-flow: column wrap;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 90%;
+  margin: .5em;
+  padding: 1em;
+  font-size: 18px;
+  border-radius: 7px;
+  color: #555;
+  border: none;
+  background-color: #f0f3f5;
+}
+
+.formulario .enviar {
+  width: 40%;
+  border-color: #00b2e3;
+  background-color: #00b2e3;
+  border-radius: 7px;
+  color: #fff;
   font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* MEDIA QUERIES */
@@ -401,6 +432,18 @@ header nav a:hover {
   #carta {
     width: 90%;
     margin: auto;
+  }
+  #nosotros .grupo1,
+  #nosotros .grupo2,
+  #carta .grupo1,
+  #carta .grupo2 {
+    width: 50% !important;
+  }
+  #nosotros .grupo1 .tipo,
+  #nosotros .grupo2 .tipo,
+  #carta .grupo1 .tipo,
+  #carta .grupo2 .tipo {
+    padding: 1em !important;
   }
   #nosotros .contenedor {
     flex-direction: row;
@@ -420,49 +463,13 @@ header nav a:hover {
   #carta .plato .datos {
     margin-left: 25px;
   }
-}
-
-.formulario {
-  display: flex;
-  flex-flow: column wrap;
-  width: 100%;
-  justify-content: center;
-  align-content: center;
-}
-
-input {
-  width: 80%;
-  margin: 1vh;
-  height: 60px;
-  font-size: 20px;
-  border-radius: 4px;
-  padding: 3%;
-  color: #555;
-  border: 2px solid #ccc;
-  background-color: #f0f3f5;
-}
-
-.ellanoteama {
-  width: 80%;
-  margin: 1vh;
-  font-size: 20px;
-  border-radius: 4px;
-  padding: 20px;
-  color: #555;
-  border: 2px solid #ccc;
-  background-color: #f0f3f5;
-  height: 20vh;
-}
-
-.enviar {
-  width: 40%;
-  border-color: #00b2e3;
-  background-color: #00b2e3;
-  border-radius: 5px;
-  border-width: 1px;
-  border-style: solid;
-  color: #fff;
-  padding: 15px 20px;
-  font-size: 20px;
+  #locales .ubi-locales,
+  #locales .img-locales {
+    width: 50% !important;
+  }
+  #contactanos .formGrupo1,
+  #contactanos .formGrupo2 {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */
