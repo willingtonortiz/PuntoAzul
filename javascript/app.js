@@ -13,7 +13,19 @@ window.addEventListener('scroll', e => {
 window.onload = function () {
     iniciarNavBar();
     DisplayCarta();
+    esconderMenu();
 };
+
+var esconderMenu  = function(){
+    var iLInk = document.getElementsByClassName('item-link');
+    for(var i=0;i<iLInk.length; i++)
+    {
+        iLInk[i].addEventListener('click',e =>{
+            document.querySelector('nav').style.maxHeight = "80px";
+        })
+    }
+}
+
 
 var DisplayCarta = function () {
     var tipos = document.querySelectorAll('.tipo');

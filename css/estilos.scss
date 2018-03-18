@@ -96,7 +96,8 @@ header {
 #carta,
 #locales,
 #reservas,
-#contactenos {
+#contactanos {
+    padding-top: 77px;
     min-height: 100vh;
 }
 
@@ -289,7 +290,7 @@ header {
 
 #locales {
     background: #eef;
-    padding: 40px;
+    padding: 77px 40px 40px 40px;
     position: relative;
     h2 {
         text-align: center;

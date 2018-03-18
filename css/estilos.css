@@ -107,7 +107,8 @@ header nav a:hover {
 #carta,
 #locales,
 #reservas,
-#contactenos {
+#contactanos {
+  padding-top: 77px;
   min-height: 100vh;
 }
 
@@ -315,7 +316,7 @@ header nav a:hover {
 
 #locales {
   background: #eef;
-  padding: 40px;
+  padding: 77px 40px 40px 40px;
   position: relative;
 }
 
